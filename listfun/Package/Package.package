@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="f1811dae-6e31-452f-8228-2f88bc3854b5" 
+        solutionId="f1811dae-6e31-452f-8228-2f88bc3854b5" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="listfun"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="2a277f92-6029-44a7-9235-02fe03dd13a2" />
+  </features>
+</package>
