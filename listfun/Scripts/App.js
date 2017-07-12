@@ -36,47 +36,62 @@ function initializePage()
 console.log("Things are happppening")
 
 
-var siteUrl = '/sites/dev/listfun';
+var siteUrl = '/sites/espodev/listfun';
     // https://higherwiretechnologies-6553ca70b9b634.sharepoint.com/sites/dev/listfun
 
 // $('#okay').click(retrieveListItems)
 
-        
+var collListItem;
+
 function retrieveListItems(e) {
-    e.preventDefault()
+        console.log("START: RetrieveListItem()")
+
+   //  e.preventDefault()
             //var clientContext = new SP.currentContext();
             //var ctx = new SP.ClientContext.get_current();
-            console.log("Loooooging")
-            // alert('Y U LIKE DIS SHAREPOINT')
+
+        console.log("RetrieveListItem(): Getting Curent Context & List Content")
             var clientContext = new SP.ClientContext(siteUrl);
             var oList = clientContext.get_web().get_lists().getByTitle('Announcements');
 
+            console.log("RetrieveListItem(): Curent Context & List Content Retreived")
+            console.log("RetrieveListItem(): CAML Query Formed")
             var camlQuery = new SP.CamlQuery();
             camlQuery.set_viewXml('<View><Query><Where><Geq><FieldRef Name=\'ID\'/>' +
                 '<Value Type=\'Number\'>1</Value></Geq></Where></Query><RowLimit>10</RowLimit></View>');
-            var collListItem = oList.getItems(camlQuery);
 
-            clientContext.load(this.collListItem);
-
+            collListItem = oList.getItems(camlQuery);
+            console.log("RetrieveListItem(): CAML Query Formed")
+            clientContext.load(collListItem);
+            console.log("RetrieveListItem(): Query Context loaded")
             clientContext.executeQueryAsync(onQuerySucceeded, onQueryFailed);
                 // Function.createDelegate(this, this.onQuerySucceeded),
                 // Function.createDelegate(this, this.onQueryFailed));
+
+            console.log("END: RetrieveListItem()")
         };
 
 function onQuerySucceeded(sender, args) {
+    console.log("START: onQuerySucceeded()")
 
+    console.log("onQuerySucceeded(): load list")
     var listItemInfo = '';
-
-    var listItemEnumerator = this.collListItem.getEnumerator();
+    var listItemEnumerator = collListItem.getEnumerator();
+    console.log("onQuerySucceeded(): list loaded")
 
     while (listItemEnumerator.moveNext()) {
         var oListItem = listItemEnumerator.get_current();
         listItemInfo += '\nID: ' + oListItem.get_id() +
             '\nTitle: ' + oListItem.get_item('Title') +
             '\nBody: ' + oListItem.get_item('Body');
+
     }
+    console.log("onQuerySucceeded(): listitem built out")
+    console.log('onQuerySucceeded(): ' + listItemInfo.toString())
 
     alert(listItemInfo.toString());
+
+    console.log("END: onQuerySucceeded()")
 }
 
 function onQueryFailed(sender, args) {

@@ -45,6 +45,7 @@
     <Content Include="Announcements\AnnouncementsInstance\Elements.xml" />
     <Content Include="Announcements\Elements.xml" />
     <Content Include="Announcements\Schema.xml" />
+    <Content Include="Listtest\Announcement\Elements.xml" />
     <Content Include="Listtest\Elements.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -60,6 +61,9 @@
     </None>
     <None Include="Announcements\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{4311d34d-a481-4ec3-9092-76fb74d9e460}</SharePointProjectItemId>
+    </None>
+    <None Include="Listtest\Announcement\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c71a1c5c-7b04-458a-8290-d2a04f8875c1}</SharePointProjectItemId>
     </None>
     <None Include="Listtest\List1Instance\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{62deae42-e562-40a1-9996-6388cfa83836}</SharePointProjectItemId>
