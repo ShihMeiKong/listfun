@@ -42,34 +42,12 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Announcements\AnnouncementsInstance\Elements.xml" />
     <Content Include="Announcements\Elements.xml" />
-    <Content Include="Announcements\Schema.xml" />
-    <Content Include="Listtest\Announcement\Elements.xml" />
-    <Content Include="Listtest\Elements.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Listtest\List1Instance\Elements.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Listtest\Schema.xml" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
-    <None Include="Announcements\AnnouncementsInstance\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{6fcb5d28-9f6d-4376-90e9-9556128e38a0}</SharePointProjectItemId>
-    </None>
     <None Include="Announcements\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{4311d34d-a481-4ec3-9092-76fb74d9e460}</SharePointProjectItemId>
-    </None>
-    <None Include="Listtest\Announcement\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{c71a1c5c-7b04-458a-8290-d2a04f8875c1}</SharePointProjectItemId>
-    </None>
-    <None Include="Listtest\List1Instance\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{62deae42-e562-40a1-9996-6388cfa83836}</SharePointProjectItemId>
-    </None>
-    <None Include="Listtest\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{c0cb0c9f-50bb-4066-8d2e-5ee03342eb61}</SharePointProjectItemId>
+      <SharePointProjectItemId>{518db9a7-dea8-4d46-94d6-19bc6a8e589c}</SharePointProjectItemId>
     </None>
     <None Include="packages.config" />
     <None Include="Pages\SharePointProjectItem.spdata">
@@ -109,11 +87,11 @@
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
-    <None Include="Features\Feature1\Feature1.feature">
+    <None Include="Features\ListFun Feature\ListFun Feature.feature">
       <FeatureId>{2a277f92-6029-44a7-9235-02fe03dd13a2}</FeatureId>
     </None>
-    <None Include="Features\Feature1\Feature1.Template.xml">
-      <DependentUpon>Feature1.feature</DependentUpon>
+    <None Include="Features\ListFun Feature\ListFun Feature.Template.xml">
+      <DependentUpon>ListFun Feature.feature</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

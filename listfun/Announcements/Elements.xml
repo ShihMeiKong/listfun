@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-    <!-- Do not change the value of the Name attribute below. If it does not match the folder name of the List project item, an error will occur when the project is run. -->
-    <ListTemplate 
-        Name="Announcements" 
-        Type="104" 
-        BaseType="0" 
-        OnQuickLaunch="TRUE" 
-        SecurityBits="11" 
-        Sequence="320"
-        DisplayName="Announcements"
-        Description="My List Definition"
-        Image="/_layouts/15/images/itann.png"/>
+  <ListInstance Id="Announcements" Title="Announcements" OnQuickLaunch="TRUE" TemplateType="104" FeatureId="00bfea71-d1ce-42de-9c63-a44004ce0104" Url="Lists/Announcements" Description="Sample Announcement List">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">Announcement 01</Field>
+          <Field Name="Body">Announcement Body 01</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
 </Elements>
