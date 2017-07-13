@@ -21,21 +21,43 @@
 
 <%-- The markup in the following Content element will be placed in the TitleArea of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server">
-    Page Title
+       SharePoint List Manipulation using JSOM
 </asp:Content>
 
 <%-- The markup and script in the following Content element will be placed in the <body> of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
     
-    <div>
-       
+    <div>     
         <p id="message">
             <!-- The following content will be replaced with the user name when you run the app - see App.js -->
-            initializing...
-          
+            initializing... 
         </p>
     </div>
-    <button id="blah">Abracadra</button>
-    <span id="okay">Okay</span>
-    <form></form>
+    <h2>the above code appears in the document.ready within initializepage()</h2>
+    <br />
+    <br />
+    <h2>Start the debugger console to see log messages</h2>
+    Code sourced from <a href="https://msdn.microsoft.com/en-us/library/office/hh185011(v=office.14).aspx">How to Create, Update and Delte List Items using JavaScript</a>
+    <b>There are bugs in Microsoft's sample code, but corrected in this solution</b>
+    
+    <br />
+    <br />
+    <br />
+    <input id="Retrieve List Items" type="button" value="Retrieve List Items" onclick="retrieveListItems();" /> 
+    <h2>retrieve 10 items from list 'Announcement' and present them in an alert</h2>
+    <br />
+    <br />
+    <input id="Create List Item" type="button" value="Create List Item" onclick="createListItem();" /> 
+    <h2>Create a new item called 'My New Item!' in list 'Announcement' </h2>
+    <br />
+    <br />
+    <input id="Delete List Item" type="button" value="Delete List Item" onclick="deleteListItem();" /> 
+    <h2>Delete the item titled 'My New Item!' from list 'Announcement'.  Click Retrieve List Items to check if you have one</h2>
+    <b>Code fails at the moment, but that's ok too for learning</b>
+  
+    <br />
+    <br />
+    <input id="ToggleCSS" type="button" value="Toggle SuiteBar and Page Title" onclick="toggleCSS();" /> 
+    <h2>Set Display:none on #SuiteBar, #titleRow & #something else</h2>
+    <b>not working yet</b>
 </asp:Content>
